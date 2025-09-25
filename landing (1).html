@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Startup Authority Builder - Transform Your Startup into Industry Leader</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fafafa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .hero-title {
+            font-size: 3.2em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Sections */
+        section {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #2c3e50;
+        }
+        
+        /* Pain Points Section */
+        .pain-points {
+            background: white;
+        }
+        
+        .pain-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .pain-item {
+            padding: 25px;
+            border-left: 4px solid #e74c3c;
+            background: #fff5f5;
+            border-radius: 8px;
+        }
+        
+        .pain-item h3 {
+            color: #e74c3c;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        
+        /* Benefits Section */
+        .benefits {
+            background: #f8f9fa;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .benefit-item {
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-top: 4px solid #27ae60;
+        }
+        
+        .benefit-item h3 {
+            color: #27ae60;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        /* Outcomes Section */
+        .outcomes {
+            background: white;
+        }
+        
+        .outcomes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .outcome-item {
+            text-align: center;
+            padding: 25px;
+            border-radius: 10px;
+            background: #f8f9fa;
+        }
+        
+        .outcome-number {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #3498db;
+            display: block;
+        }
+        
+        /* Pricing Section */
+        .pricing {
+            background: #f8f9fa;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .pricing-card {
+            background: white;
+            border-radius: 12px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .pricing-card.featured {
+            border: 3px solid #3498db;
+            transform: scale(1.05);
+        }
+        
+        .pricing-title {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        
+        .pricing-price {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #3498db;
+            margin-bottom: 20px;
+        }
+        
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        
+        .pricing-features li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 20px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+        }
+        
+        .cta-button:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(231, 76, 60, 0.4);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.2em;
+            }
+            
+            .section-title {
+                font-size: 2em;
+            }
+            
+            .pricing-card.featured {
+                transform: none;
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1 class="hero-title fade-in">AI Startup Authority Builder</h1>
+            <p class="hero-subtitle fade-in">Transform Your Series A-B AI Startup into the Industry Voice Investors & Enterprise Clients Trust</p>
+            <p style="font-style: italic; margin-top: 20px; opacity: 0.8;">Stop blending into the AI noise. Start commanding attention with authoritative content that positions you as the go-to expert in your space.</p>
+        </div>
+    </header>
+
+    <!-- Pain Points Section -->
+    <section class="pain-points">
+        <div class="container">
+            <h2 class="section-title">🚨 The Series A-B Reality Check: Are You Invisible Where It Matters Most?</h2>
+            <div class="pain-grid">
+                <div class="pain-item">
+                    <h3>Lost in the AI hype cycle</h3>
+                    <p>Your breakthrough technology gets buried under generic "AI revolution" content</p>
+                </div>
+                <div class="pain-item">
+                    <h3>Investor meetings lack substance</h3>
+                    <p>No authoritative content to back up your pitch deck claims</p>
+                </div>
+                <div class="pain-item">
+                    <h3>Enterprise prospects ghost you</h3>
+                    <p>Decision-makers can't distinguish you from 50 other AI startups</p>
+                </div>
+                <div class="pain-item">
+                    <h3>Competitors with inferior tech are winning</h3>
+                    <p>They have better thought leadership positioning</p>
+                </div>
+                <div class="pain-item">
+                    <h3>Funding timeline pressure</h3>
+                    <p>You lack the content credibility VCs expect from market leaders</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <h2 class="section-title">✅ What You Get: Authority That Drives Results</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <h3>🎯 Deep-Dive Technical Content</h3>
+                    <p>4 comprehensive blog posts (2,000+ words each) that showcase your technical expertise and unique approach to AI challenges.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>📄 Comprehensive White Papers</h3>
+                    <p>15-20 page authoritative papers that position your startup as an industry innovator and attract high-value prospects.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>🔍 Strategic SEO & Research</h3>
+                    <p>Keyword optimization and technical accuracy review ensuring your content ranks where your audience searches.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>📈 Measurable Business Impact</h3>
+                    <p>Track real results: 40% increase in organic search visibility, 3x improvement in time-on-page metrics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Outcomes Section -->
+    <section class="outcomes">
+        <div class="container">
+            <h2 class="section-title">🏆 Proven Outcomes for Series A-B Startups</h2>
+            <div class="outcomes-grid">
+                <div class="outcome-item">
+                    <span class="outcome-number">40%</span>
+                    <p>Increase in organic search visibility within 90 days</p>
+                </div>
+                <div class="outcome-item">
+                    <span class="outcome-number">3x</span>
+                    <p>Improvement in time-on-page metrics</p>
+                </div>
+                <div class="outcome-item">
+                    <span class="outcome-number">25+</span>
+                    <p>Qualified enterprise leads per month</p>
+                </div>
+                <div class="outcome-item">
+                    <span class="outcome-number">90</span>
+                    <p>Days to thought leader positioning</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing">
+        <div class="container">
+            <h2 class="section-title">💼 Choose Your Authority Level</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3 class="pricing-title">🚀 Essential</h3>
+                    <div class="pricing-price">$4,500<span style="font-size: 0.4em; color: #666;">/month</span></div>
+                    <ul class="pricing-features">
+                        <li>4 technical blogs (2,000+ words)</li>
+                        <li>Quarterly white paper</li>
+                        <li>SEO optimization</li>
+                        <li>Technical accuracy review</li>
+                    </ul>
+                    <p style="color: #666; font-style: italic;">Perfect for establishing initial thought leadership</p>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <h3 class="pricing-title">📈 Growth</h3>
+                    <div class="pricing-price">$6,500<span style="font-size: 0.4em; color: #666;">/month</span></div>
+                    <ul class="pricing-features">
+                        <li>6 technical blogs (2,000+ words)</li>
+                        <li>Bi-monthly white paper</li>
+                        <li>Advanced SEO optimization</li>
+                        <li>Priority support</li>
+                    </ul>
+                    <p style="color: #666; font-style: italic;">Ideal for consistent market positioning</p>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3 class="pricing-title">⚡ Authority</h3>
+                    <div class="pricing-price">$9,000<span style="font-size: 0.4em; color: #666;">/month</span></div>
+                    <ul class="pricing-features">
+                        <li>8 technical blogs (2,000+ words)</li>
+                        <li>Monthly white paper</li>
+                        <li>Case studies</li>
+                        <li>24/7 priority support</li>
+                    </ul>
+                    <p style="color: #666; font-style: italic;">For complete market dominance</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 30px;">
+                <p><strong>Delivery Timeline:</strong> 2-week blog turnaround, 4-6 weeks for white papers</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2 style="margin-bottom: 20px;">🎯 Ready to Become the Authority Your Market Looks Up To?</h2>
+            <p style="font-size: 1.3em; margin-bottom: 10px;">📞 Book Your Free Strategy Session</p>
+            <p style="margin-bottom: 30px;">Get a custom authority-building roadmap tailored to your AI startup's unique positioning.</p>
+            <a href="#" class="cta-button">CLAIM YOUR AUTHORITY AUDIT - LIMITED TO 5 STARTUPS THIS MONTH</a>
+            <p style="margin-top: 20px; font-style: italic; opacity: 0.9;">No generic advice. Just a detailed plan showing exactly how to establish thought leadership in your AI niche within 90 days.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: #2c3e50; color: white; text-align: center; padding: 40px 0;">
+        <div class="container">
+            <p style="margin-bottom: 10px;"><em>Specialized in AI Startup Content • Proven Authority Building • Enterprise & Investor Focused</em></p>
+            <p style="opacity: 0.7;">© 2025 AI Startup Authority Builder. Transform your startup into an industry leader.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections for animation
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(30px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+
+        // CTA button click tracking (you can replace this with your actual form/booking system)
+        document.querySelector('.cta-button').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('Redirecting to booking system... (Replace this with your actual booking/contact form)');
+            // Replace the above line with your actual booking system integration
+            // window.location.href = 'https://your-booking-system.com';
+        });
+    </script>
+</body>
+</html>
